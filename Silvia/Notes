@@ -1,0 +1,27 @@
+Garage: 
+For two data points in the test set, there is some information missing with the garage. 
+For these two houses, they have a garage. Further imputation can be attempted if needed. 
+For now, I will impute them as 0, as not having a garage. 
+
+Basement:
+same thing happens to basement too. There are some data points where there is a basement but 
+some data are missing for this basement. For now, I will impute those datapoints as not
+having a basement. Further imputation shall be attempted if needed. 
+
+Exterior 1st and 2nd:
+Since those are nominal values for further one-hot coding, I will aggregate these two columns into one. 
+For now, I will leave them out. 
+There is only one missing value for the two variables, it is the same house. I am thinking replacing those
+values with the most frequent category. Further attempt shall be implemented. 
+
+Masonry veneer type and area:
+for houses with none type, the area is 0. 
+However, for houses with NA, the area is also NA. 
+I will think of this as completely missing at random, will replace the NA values with the most frequent
+category and maybe the mean of that category to replace the numeric values. 
+
+Pool Quality:
+For pool quality, most of the NAs have a 0 pool area, however, 3
+of the missing values have a greater than 0 pool area. Those data points
+should not be imputed to none. Instead, they should be imputed to some categories with 
+careful selection. The ids are 2420, 2503, 2599. 
